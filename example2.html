@@ -21,6 +21,7 @@
 	$(function(){
 		var obj = new TextACounter();
 		obj.add("#ta1","#ta1_counter");
+		obj.add("#ta2","#ta2_counter");
 		
 	});
 	</script>
@@ -42,60 +43,35 @@
 <a href="https://github.com/amaraimusi/TextACounter">GitHub</a><br>
 <br>
 
+
+
+
+<h2>Example 2</h2>
+
 <div>
-	Count the number of characters in the text area and display it on another element.
+	Supports multiple text areas.
 </div>
 
-
-<h2>Example 1</h2>
+<p>textarea 1</p>
 <textarea name="" id="ta1" cols="30" rows="10"></textarea>
 <div id="ta1_counter"></div>
-<hr>
 
-<div style="margin-top:80px">
-<h2>Source code</h2>
-<pre class="intro_source_code">
-	&lt;script src="jquery.js"&gt;&lt;/script&gt;
-	&lt;script src="TextACounter.js"&gt;&lt;/script&gt;
-	............ any codes .....
-	
-	&lt;script&gt;
-	$(function(){
-		var obj = new TextACounter();
-		obj.add("#ta1","#ta1_counter");
-		
-	});
-	&lt;/script&gt;
-	
-	&lt;textarea id="ta1" &gt;&lt;/textarea&gt;
-	&lt;div id="ta1_counter"&gt;&lt;/div&gt;
-</pre>
-</div>
+
+<p>textarea 2</p>
+<textarea name="" id="ta2" cols="30" rows="10"></textarea>
+<div id="ta2_counter"></div>
 
 
 
-<div style="margin-top:180px">
-<h3>Other examples</h3>
-<table class="table">
-	<thead>
-		<tr><th>example</th><th>Description</th></tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a href="example1.html">example1</a></td>
-			<td>It is a simple example.(Example of this page.)</td>
-		</tr>
-		<tr>
-			<td><a href="example2.html">example2</a></td>
-			<td>Supports multiple text areas.</td>
-		</tr>
-		<tr>
-			<td><a href="example3.html">example3</a></td>
-			<td>If you set the maxlength attribute, the display  will change.</td>
-		</tr>
-	</tbody>
-</table>
-</div>
+
+
+
+
+
+
+
+
+
 
 
 

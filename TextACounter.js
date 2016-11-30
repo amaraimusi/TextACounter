@@ -10,36 +10,17 @@
  * 
  */
 var TextACounter =function(option){
-	
-	
-	this.option = option;
-	
+
 	var myself=this; // Instance of myself.
 
 	/**
 	 * initialized.
 	 */
 	this.constract=function(){
-		
-		// If Option property is empty, set a value.
-		this.option = setOptionIfEmpty(this.option);
-		
+
 	};
 	
-	// If Option property is empty, set a value.
-	function setOptionIfEmpty(option){
-		
-		if(option == undefined){
-			option = {};
-		}
-		
-		if(option['flg'] == undefined){
-			option['flg'] = 0;
-		}
-		
-		return option;
-	};
-	
+
 	
 	/**
 	 * Add textarea element and count display element.
@@ -51,10 +32,22 @@ var TextACounter =function(option){
 		var ta = $(ta_slt);
 		var disp = $(display_slt);
 		
+		
 		ta.keyup(function(e){
 			var str = ta.val();
 			var len = str.length;
-			disp.html(len); 
+		
+			var maxlength = ta.attr('maxlength');
+			if(!maxlength){
+				disp.html(len); 
+			}else{
+				var class_attr = 'text-success';
+				if(len > maxlength){
+					class_attr = 'text-danger';
+				}
+				var msg = "<span class='" + class_attr + "'>" + len + ' / ' + maxlength + "</span>";
+				disp.html(msg); 
+			}
 		});
 		
 	};
