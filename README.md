@@ -23,9 +23,9 @@ Count the number of characters in the text area and display it on another elemen
 # Info
 MIT
 
-version 1.0
+version 1.1
 
-created 2016-11-30
+created 2016-11-29 | 2016-12-1
 
 auther kenji uehara
 

@@ -60,6 +60,36 @@
 <p>textarea 2</p>
 <textarea name="" id="ta2" cols="30" rows="10"></textarea>
 <div id="ta2_counter"></div>
+<hr>
+
+
+
+
+
+
+<div style="margin-top:80px">
+<h2>Source code</h2>
+<pre class="intro_source_code">
+	&lt;script src="jquery.js"&gt;&lt;/script&gt;
+	&lt;script src="TextACounter.js"&gt;&lt;/script&gt;
+	............ any codes .....
+	
+	&lt;script&gt;
+	$(function(){
+		var obj = new TextACounter();
+		obj.add("#ta1","#ta1_counter");
+		obj.add("#ta2","#ta2_counter");
+		
+	});
+	&lt;/script&gt;
+
+	&lt;textarea name="" id="ta1" &gt;&lt;/textarea&gt;
+	&lt;div id="ta1_counter"&gt;&lt;/div&gt;
+	
+	&lt;textarea name="" id="ta2" &gt;&lt;/textarea&gt;
+	&lt;div id="ta2_counter"&gt;&lt;/div&gt;
+</pre>
+</div>
 
 
 
