@@ -18,11 +18,18 @@
 	<script src="TextACounter.js"></script>
 
 	<script>
+	var textACounter = new TextACounter();
+	
 	$(function(){
-		var obj = new TextACounter();
-		obj.add("#ta1","#ta1_counter");
+		textACounter = new TextACounter();
+		textACounter.add("#ta1","#ta1_counter");
 		
 	});
+	
+	function test4(){
+		$('#ta1').html('fox');
+		textACounter.refresh();
+	}
 	</script>
 
 </head>
@@ -42,15 +49,26 @@
 <a href="https://github.com/amaraimusi/TextACounter">GitHub</a><br>
 <br>
 
+
+
+
+<h2>Example 4</h2>
+
 <div>
-	Count the number of characters in the text area and display it on another element.
+	When the text area is rewritten by another program.<br>
+	In this case, the "refresh" function.
 </div>
 
-
-<h2>Example 1</h2>
-<textarea name="" id="ta1" cols="30" rows="10">Hello world!</textarea>
+<p>textarea 1</p>
+<input type="button" class="btn btn-primary btn-xs" value="another program" onclick="test4()" /><br>
+<textarea name="" id="ta1" maxlength="20" >Hello World!</textarea>
 <div id="ta1_counter"></div>
 <hr>
+
+
+
+
+
 
 <div style="margin-top:80px">
 <h2>Source code</h2>
@@ -59,50 +77,24 @@
 	&lt;script src="TextACounter.js"&gt;&lt;/script&gt;
 	............ any codes .....
 	
-	&lt;script&gt;
-	$(function(){
-		var obj = new TextACounter();
-		obj.add("#ta1","#ta1_counter");
-		
-	});
-	&lt;/script&gt;
-	
-	&lt;textarea id="ta1" &gt;&lt;/textarea&gt;
-	&lt;div id="ta1_counter"&gt;&lt;/div&gt;
+
+
 </pre>
 </div>
 
 
 
-<div style="margin-top:180px">
-<h3>Other examples</h3>
-<table class="table">
-	<thead>
-		<tr><th>example</th><th>Description</th></tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a href="example1.html">example1</a></td>
-			<td>It is a simple example.(Example of this page.)</td>
-		</tr>
-		<tr>
-			<td><a href="example2.html">example2</a></td>
-			<td>Supports multiple text areas.</td>
-		</tr>
-		<tr>
-			<td><a href="example3.html">example3</a></td>
-			<td>If you set the maxlength attribute, the display  will change.</td>
-		</tr>
-		<tr>
-			<td><a href="example4.html">example4</a></td>
-			<td>
-				When the text area is rewritten by another program.<br>
-				In this case, the "refresh" function.
-			</td>
-		</tr>
-	</tbody>
-</table>
-</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
